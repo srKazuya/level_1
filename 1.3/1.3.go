@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-var workers int = 10
+var workers int= 10
 
 func main() {
 	ch := make(chan int)
@@ -14,7 +14,7 @@ func main() {
 	wg := &sync.WaitGroup{}
 
 
-	for i := 0; i < int(workers); i++ {
+	for i := 0; i < workers; i++ {
 		wg.Add(1)
 		go func() {
 			defer wg.Done()
