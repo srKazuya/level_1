@@ -2,8 +2,8 @@ package main
 
 var justString string
 
-func createHugeString(){
-	return 
+func createHugeString(size int) string {
+	return string(make([]byte, size))
 }
 
 func someFunc() {
